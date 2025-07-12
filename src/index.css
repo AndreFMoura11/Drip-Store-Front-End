@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/autoplay';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+
+  /* Cores Button Padrão Principal */
+  --color-roxo-primario: rgb(201, 32, 113);
+  --color-roxo-secundario: rgb(153, 25, 86);
+  --color-cinza-final: rgb(204, 204, 204);
+
+  /* Cores Button Padrão Secundário */
+  --color-cinza-primario: rgb(245, 245, 245);
+  --color-azul-secundario: rgb(181, 182, 242);
+  --color-branco-final-button: rgb(252, 252, 252);
+
+  /* Cores Button Padrão Terciário */
+  --color-amarelo-primario: rgb(255, 179, 31);
+  --color-amarelo-secundario: rgb(207, 137, 0);
+  /* --color-verde-primario: rgb(204, 204, 204); */
+
+  /* Cores para o demais do sistema */
+  --color-cinza: #474747;
+  --color-branco: #fff;
+  --color-preto: #000;
+  --color-dark: #1F1F1F;
+
+/* --------------------------------------------------- */
+
+  /* Fontes */
+  --font-default: 'Inter', sans-serif;
+  --font-regular: 400;
+  --font-bold: 700;
+  --font-italic: italic;
+
+  /* Tamanhos de título */
+  --font-title-xl: 2.25rem; /* 36px */
+  --font-title-lg: 1.875rem; /* 30px */
+  --font-title-md: 1.5rem;   /* 24px */
+  --font-title-sm: 1.25rem;  /* 20px */
+
+  /* Tamanhos de texto */
+  --font-text-lg: 1.125rem;  /* 18px */
+  --font-text-md: 1rem;      /* 16px */
+  --font-text-sm: 0.875rem;  /* 14px */
+  --font-text-xs: 0.75rem;   /* 12px */
+  --font-text-tiny: 0.625rem;/* 10px */
+
+
+}
+
+/* Exemplo de aplicação com Tailwind */
+.text-h1 {
+  @apply text-[var(--font-title-xl)] font-[var(--font-bold)] font-[var(--font-default)];
+}
+
+.text-h2 {
+  @apply text-[var(--font-title-lg)] font-[var(--font-bold)] font-[var(--font-default)];
+}
+
+.text-h3 {
+  @apply text-[var(--font-title-md)] font-[var(--font-bold)] font-[var(--font-default)];
+}
+
+.text-h4 {
+  @apply text-[var(--font-title-sm)] font-[var(--font-bold)] font-[var(--font-default)];
+}
+
+.text-p-lg {
+  @apply text-[var(--font-text-lg)] font-[var(--font-regular)] font-[var(--font-default)];
+}
+
+.text-p-md {
+  @apply text-[var(--font-text-md)] font-[var(--font-regular)] font-[var(--font-default)];
+}
+
+.text-p-sm {
+  @apply text-[var(--font-text-sm)] font-[var(--font-regular)] font-[var(--font-default)];
+}
+
+.text-p-xs {
+  @apply text-[var(--font-text-xs)] font-[var(--font-regular)] font-[var(--font-default)];
+}
+
+.text-p-tiny {
+  @apply text-[var(--font-text-tiny)] font-[var(--font-regular)] font-[var(--font-default)];
+}
+
+.text-p-md-italic {
+  @apply text-[var(--font-text-md)] italic font-[var(--font-regular)] font-[var(--font-default)];
+}
+
+.text-p-sm-bold {
+  @apply text-[var(--font-text-sm)] font-[var(--font-bold)] font-[var(--font-default)];
+}
+
+/*
+🧠 O que é @apply?
+@apply é uma diretiva do Tailwind que permite usar utilitários do Tailwind dentro de uma classe CSS.
+
+👉 Com isso, você cria "atalhos" reutilizáveis, ou seja: uma única classe para aplicar vários estilos.
+
+
+✅ Exemplo real de uso:
+Antes (sem @apply, direto no componente):
+
+<h1 className="text-[2.25rem] font-[700] font-['Inter']">Título</h1>
+
+
+Depois (com classe personalizada):
+
+<h1 className="text-h1">Título</h1>
+☑️ Muito mais limpo, legível e reaproveitável
+
+*/
